@@ -32,6 +32,7 @@ const importData = async () => {
     try {
         console.log('- Importing bootcamps...');
         await Bootcamp.create(bootcamps);
+
         console.log('- Importing courses...');
         await Course.create(courses);
 
@@ -51,7 +52,7 @@ const deleteData = async () => {
         console.log('- Deleting courses...');
         await Course.deleteMany();
 
-        console.log('All data was deleted...'.yellow.bold);
+        console.log('Data deleted...'.yellow.bold);
         process.exit();
     } catch (err) {
         console.log('An error occurred:\n'.red.bold, err.stack);
@@ -65,7 +66,7 @@ if (process.argv[2] === '-i') {
     deleteData();
 } else {
     console.log(`Option ${process.argv[2]} not available`.red);
-    console.log('\nTry one of the bellow options:\n' +
+    console.log('\nTry one of the options bellow:\n' +
         '\t-i to import data\n' +
         '\t-d to delete all data');
     process.exit(1);

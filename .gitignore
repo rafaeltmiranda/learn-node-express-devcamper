@@ -174,3 +174,4 @@ $RECYCLE.BIN/
 # Aditional folders/files to ignore
 node_modules/
 config/config.env
+_data/
