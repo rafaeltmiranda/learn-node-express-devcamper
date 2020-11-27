@@ -70,8 +70,7 @@ const BootcampSchema = new mongoose.Schema({
     },
     averageRating: {
         type: Number,
-        min: [1, 'Rating must be at least 1'],
-        max: [10, 'Rating can not be more than 10']
+        default: 0
     },
     averageCost: Number,
     photo: {
@@ -97,6 +96,11 @@ const BootcampSchema = new mongoose.Schema({
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
+        required: true
     }
 }, {
     toJSON: { virtuals: true },
@@ -111,8 +115,6 @@ BootcampSchema.pre('save', function (next) {
 
 // Geocode & create location field
 BootcampSchema.pre('save', async function (next) {
-    console.log(`Generating location from address [${this.address}]`);
-
     const loc = await geocoder.geocode(this.address);
     this.location = {
         type: 'Point',

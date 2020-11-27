@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router({ mergeParams: true });
 
+const { protect, authorize } = require('../middleware/auth');
+
 const {
     getCourses,
     getCourse,
@@ -18,13 +20,13 @@ router
         path: 'bootcamp',
         select: 'name description'
     }), getCourses)
-    .post(addCourse);
+    .post(protect, authorize('publisher', 'admin'), addCourse);
 
 router
     .route('/:id')
     .get(getCourse)
-    .put(updateCourse)
-    .delete(delegeCourse);
+    .put(protect, authorize('publisher', 'admin'), updateCourse)
+    .delete(protect, authorize('publisher', 'admin'), delegeCourse);
 
 
 
