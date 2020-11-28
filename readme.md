@@ -1,16 +1,15 @@
-### Index
-
-- [App descriction](#devcamper-api)
-  - Usage
-  - Install Dependencies
-  - Run app
-
-- More about this project
-  
-
 # DevCamper API
 
 > Backend API for DevCamper application, which is a bootcamp directory website
+
+### Index
+
+- [App descriction](#devcamper-api)
+  - [Usage](#usage)
+  - [Install Dependencies](#install-dependencies)
+  - [Run app](#run-app)
+
+- [Understand this Project](#understand-this-project)
 
 ## Usage
 
@@ -34,3 +33,5 @@ npm start
 
 - Version: 1.0.0
 - Licence: MIT
+
+# Understand this Project
