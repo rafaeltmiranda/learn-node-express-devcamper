@@ -2,7 +2,7 @@
 
 > Backend API for DevCamper application, which is a bootcamp directory website
 
-### Index
+## Index
 
 - [App descriction](#devcamper-api)
   - [Usage](#usage)
@@ -11,11 +11,11 @@
 
 - [Understand this Project](#devcamper-backend-api-specifications)
   - [Requirements](#requirements)
-  - [Security](#security)
-  - [Security](#security)
-  - [Security](#security)
-  - [Security](#security)
-  - [Security](#security)
+  - [Documentation](#documentation)
+  - [Deployment](#deployment)
+  - [Code Related Suggestions](#code-related-suggestions)
+
+
 
 ## Usage
 
