@@ -1,6 +1,6 @@
 ### Index
 
-- App descriction
+- [App descriction](#devcamper-api)
   - Usage
   - Install Dependencies
   - Run app
@@ -8,7 +8,7 @@
 - More about this project
   
 
-# (#DevCamper-API)
+# DevCamper API
 
 > Backend API for DevCamper application, which is a bootcamp directory website
 
